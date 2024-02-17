@@ -3,14 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@testing-library/jest-dom": "^5.11.8",
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.0",
     "alertifyjs": "^1.13.1",
     "axios": "^0.21.1",
     "dotenv": "^16.4.1",
-    "i": "^0.3.7",
-    "npm": "^10.4.0",
     "query-string": "^6.13.8",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -32,7 +31,7 @@
     ]
   },
   "scripts": {
-    "start": "set PORT=3000 && react-scripts --openssl-legacy-provider start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
