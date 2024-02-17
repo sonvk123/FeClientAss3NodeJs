@@ -9,10 +9,10 @@ import io from "socket.io-client";
 function Chat(props) {
   const isLogin = useSelector((state) => state.Session.isLogin);
 
-  // KHI DELOY
-  let url = "https://ass3-nodejs-q5t8.onrender.com";
-  // KHI DEV
-  // let url = "http://localhost:5000";
+  let url =
+    process.env.REACT_APP_NODE_ENV === "production"
+      ? "https://ass3-nodejs-q5t8.onrender.com"
+      : "http://localhost:5000";
 
   let socket = isLogin ? io(url, { transports: ["websocket"] }) : "";
 
