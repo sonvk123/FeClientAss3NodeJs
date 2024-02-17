@@ -4,7 +4,7 @@ import queryString from "query-string";
 
 let url =
   process.env.REACT_APP_NODE_ENV === "production"
-    ? "https://ass3-nodejs-q5t8.onrender.com/client"
+    ? "https://beass3nodejs.onrender.com/client"
     : "http://localhost:5000/client";
 
 console.log("process.env.REACT_APP_NODE_ENV:", process.env.REACT_APP_NODE_ENV);
