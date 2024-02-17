@@ -4,7 +4,7 @@ import DetailHistory from "./Component/DetailHistory";
 import MainHistory from "./Component/MainHistory";
 
 function History(props) {
-  console.log("History");
+
   return (
     <Switch>
       <Route exact path="/history" component={MainHistory} />

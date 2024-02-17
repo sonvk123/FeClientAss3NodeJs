@@ -35,14 +35,14 @@ function Detail(props) {
   // Hàm lấy số lượng sản phẩm trong giỏ hàng
   const getCartItemQuantity = async () => {
     let foundItem = null;
-    console.log(isLoggedIn());
+    // console.log(isLoggedIn());
     if (!isLoggedIn()) {
       foundItem = listCart.find((item) => item.idProduct === id);
     } else {
       const params = { idUser: localStorage.getItem("id_user") };
       const query = "?" + queryString.stringify(params);
       const cart = await CartAPI.getCarts(query);
-      console.log("cart:", cart);
+      // console.log("cart:", cart);
       foundItem = cart.find((item) => item.productId === id);
     }
 
@@ -110,7 +110,7 @@ function Detail(props) {
   //Hàm này là Thêm Sản Phẩm
   const addToCart = async () => {
     const currentQuantity = await getCartItemQuantity();
-    console.log("currentQuantity:", currentQuantity);
+    // console.log("currentQuantity:", currentQuantity);
 
     if (text <= count && currentQuantity + text <= count) {
       const id_user_cart = isLoggedIn()
@@ -134,7 +134,7 @@ function Detail(props) {
         };
         const query = "?" + queryString.stringify(params);
         const req = await CartAPI.postAddToCart(query);
-        console.log("req:", req);
+        // console.log("req:", req);
       } else {
         const action = addCart(data);
         dispatch(action);

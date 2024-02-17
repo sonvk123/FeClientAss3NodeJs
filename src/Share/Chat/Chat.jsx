@@ -58,7 +58,7 @@ function Chat(props) {
   useEffect(() => {
     // nếu có roomId thì sẽ kết nối tới socket Io
     if (roomId) {
-      console.log("nếu có roomId thì sẽ kết nối tới socket Io");
+      // console.log("nếu có roomId thì sẽ kết nối tới socket Io");
       socket.emit("join", roomId);
     }
   }, [roomId]);

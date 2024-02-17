@@ -67,10 +67,10 @@ function Cart(props) {
 
         const query = "?" + queryString.stringify(params);
 
-        console.log(query);
+        // console.log(query);
 
         const response = await CartAPI.getCarts(query);
-        console.log("response:", response);
+        // console.log("response:", response);
         setCart(response);
 
         getTotal(response);
@@ -84,7 +84,7 @@ function Cart(props) {
 
   //Hàm này dùng để truyền xuống cho component con xử và trả ngược dữ liệu lại component cha
   const onDeleteCart = (getUser, getProduct) => {
-    console.log("idUser: " + getUser + ", idProduct: " + getProduct);
+    // console.log("idUser: " + getUser + ", idProduct: " + getProduct);
 
     if (localStorage.getItem("id_user")) {
       // user đã đăng nhập
@@ -95,11 +95,11 @@ function Cart(props) {
           userId: getUser,
           idProduct: getProduct,
         };
-        console.log("params:", params);
+        // console.log("params:", params);
         const query = "?" + queryString.stringify(params);
 
         const response = await CartAPI.deleteToCart(query);
-        console.log(response);
+        // console.log(response);
       };
 
       fetchDelete();
@@ -135,14 +135,14 @@ function Cart(props) {
 
   //Hàm này dùng để truyền xuống cho component con xử và trả ngược dữ liệu lại component cha
   const onUpdateCount = (getUser, getProduct, getCount) => {
-    console.log(
-      "Count: " +
-        getCount +
-        ", idUser: " +
-        getUser +
-        ", idProduct: " +
-        getProduct
-    );
+    // console.log(
+    //   "Count: " +
+    //     getCount +
+    //     ", idUser: " +
+    //     getUser +
+    //     ", idProduct: " +
+    //     getProduct
+    // );
 
     if (localStorage.getItem("id_user")) {
       // user đã đăng nhập
@@ -158,7 +158,7 @@ function Cart(props) {
         const query = "?" + queryString.stringify(params);
 
         const response = await CartAPI.putToCart(query);
-        console.log(response);
+        // console.log(response);
       };
 
       fetchPut();
@@ -166,7 +166,7 @@ function Cart(props) {
       //Sau đó thay đổi state loadAPI và load lại hàm useEffect
       setLoadAPI(true);
 
-      console.log("Ban Da Dang Nhap!");
+      // console.log("Ban Da Dang Nhap!");
 
       alertify.set("notifier", "position", "bottom-left");
       alertify.success("Bạn Đã Sửa Hàng Thành Công!");

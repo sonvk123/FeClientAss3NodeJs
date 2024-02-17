@@ -15,13 +15,13 @@ function Home(props) {
       try {
         setLoading(true);
         const response = await ProductAPI.getAPI();
-        console.log("response:", response);
+        // console.log("response:", response);
 
         const data = response.products.splice(0, 8);
-        console.log(data);
+        // console.log(data);
         setProducts(data);
       } catch (err) {
-        console.log(err);
+        // console.log(err);
         setError("lỗi rồi");
       } finally {
         setLoading(false);

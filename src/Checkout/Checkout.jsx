@@ -49,7 +49,7 @@ function Checkout(props) {
 
         const response = await CartAPI.getCarts(query);
 
-        console.log(response);
+        // console.log(response);
 
         setCarts(response);
 
@@ -124,7 +124,7 @@ function Checkout(props) {
               setPhoneError(false);
               setAddressError(true);
             } else {
-              console.log("Thanh Cong");
+              // console.log("Thanh Cong");
 
               setLoad(!load);
             }
@@ -150,7 +150,7 @@ function Checkout(props) {
 
         const response = await CheckoutAPI.postEmail(query);
 
-        console.log(response);
+        // console.log(response);
       };
 
       sendMail();

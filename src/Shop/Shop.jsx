@@ -29,7 +29,7 @@ function Shop(props) {
 
   //Hàm này dùng để lấy value từ component SortProduct truyền lên
   const handlerChangeSort = (value) => {
-    console.log("Value: ", value);
+    // console.log("Value: ", value);
 
     setSort(value);
   };
@@ -37,7 +37,7 @@ function Shop(props) {
   //Hàm này dùng để thay đổi state pagination.page
   //Nó sẽ truyền xuống Component con và nhận dữ liệu từ Component con truyền lên
   const handlerChangePage = (value) => {
-    console.log("Value: ", value);
+    // console.log("Value: ", value);
 
     //Sau đó set lại cái pagination để gọi chạy làm useEffect gọi lại API pagination
     setPagination({
@@ -51,7 +51,7 @@ function Shop(props) {
   //Hàm này dùng để thay đổi state pagination.search
   //Hàm này sẽ truyền xuống Component con và nhận dữ liệu từ Component con truyền lên
   const handlerSearch = (value) => {
-    console.log("Value: ", value);
+    // console.log("Value: ", value);
 
     setPagination({
       page: pagination.page,
@@ -63,7 +63,7 @@ function Shop(props) {
 
   //Hàm này dùng để thay đổi state pagination.category
   const handlerCategory = (value) => {
-    console.log("Value: ", value);
+    // console.log("Value: ", value);
 
     setPagination({
       page: pagination.page,

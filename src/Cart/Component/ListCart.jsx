@@ -23,11 +23,11 @@ function ListCart(props) {
   const dispatch = useDispatch();
 
   const handlerChangeText = (e) => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
   };
 
   const handlerDelete = (getProduct) => {
-    console.log("listCart:", listCart);
+    // console.log("listCart:", listCart);
     if (!onDeleteCart) {
       return;
     }

@@ -11,11 +11,11 @@ function DetailHistory(props) {
   const [information, setInformation] = useState({});
 
   useEffect(() => {
-    console.log("id:", id);
+    // console.log("id:", id);
 
     const fetchData = async () => {
       const response = await HistoryAPI.getDetail(id);
-      console.log("response:", response);
+      // console.log("response:", response);
       setTotal(response.cart.total);
 
       setCart(response.cart.items);

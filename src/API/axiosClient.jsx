@@ -7,8 +7,6 @@ process.env.REACT_APP_NODE_ENV === "production"
   ? "https://beass3nodejs.onrender.com/client"
   : "http://localhost:5000/client";
 
-console.log("process.env.REACT_APP_NODE_ENV:", process.env.REACT_APP_NODE_ENV);
-console.log("url:", url);
 
 const axiosClient = axios.create({
   baseURL: url,
@@ -20,7 +18,7 @@ const axiosClient = axios.create({
 });
 
 axiosClient.interceptors.request.use(async (config) => {
-  console.log("config:", config);
+  // console.log("config:", config);
 
   return config;
 });
@@ -28,7 +26,7 @@ axiosClient.interceptors.request.use(async (config) => {
 axiosClient.interceptors.response.use(
   (response) => {
     // Xử lý response thành công
-    console.log("response:", response);
+    // console.log("response:", response);
     return response.data;
   },
 
@@ -36,9 +34,9 @@ axiosClient.interceptors.response.use(
     // Xử lý lỗi
     if (error.response) {
       // Yêu cầu được gửi và server trả về mã lỗi
-      console.error("Lỗi response:", error.response.data);
-      console.error("Mã trạng thái:", error.response.status);
-      console.error("Headers:", error.response.headers);
+      // console.error("Lỗi response:", error.response.data);
+      // console.error("Mã trạng thái:", error.response.status);
+      // console.error("Headers:", error.response.headers);
 
       // Trả về đối tượng chứa thông tin lỗi
       return {
@@ -50,7 +48,7 @@ axiosClient.interceptors.response.use(
       };
     } else if (error.request) {
       // Yêu cầu được gửi nhưng không nhận được phản hồi
-      console.error("Lỗi request:", error.request);
+      // console.error("Lỗi request:", error.request);
 
       // Trả về đối tượng chứa thông tin lỗi
       return {
@@ -59,7 +57,7 @@ axiosClient.interceptors.response.use(
       };
     } else {
       // Có lỗi khi thiết lập yêu cầu
-      console.error("Thông báo lỗi:", error.message);
+      // console.error("Thông báo lỗi:", error.message);
 
       // Trả về đối tượng chứa thông tin lỗi
       return {

@@ -9,7 +9,7 @@ function LoginLink(props) {
 
   const fetchData = async () => {
     const response = await UserAPI.getLogout();
-    console.log("response:", response);
+    // console.log("response:", response);
   };
   const onRedirect = () => {
     localStorage.clear();
